@@ -1,0 +1,105 @@
+
+.contact-hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0;
+  color: white;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 60, 145, 0.85);
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.contact-hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+.contact-info-section {
+  background: #f4f6f9;
+  padding: 60px 0;
+}
+
+.contact-info-card {
+  padding: 20px;
+}
+
+.contact-info-icon {
+  width: 90px;
+  height: 90px;
+  background: #4a97d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: white;
+}
+
+.contact-info-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-info-card p {
+  margin: 0;
+  color: #444;
+}
+
+
+
+.contact-form-section-new {
+  padding: 80px 0;
+  background: white;
+}
+
+.contact-form-box-new {
+  background: #f8f9fb;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-box-new h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contact-send-btn-new {
+  background: #1e6dfb;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.contact-send-btn-new:hover {
+  background: #1559d6;
+}
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #f1c40f;
+}

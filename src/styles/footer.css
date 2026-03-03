@@ -1,0 +1,14 @@
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 0;
+  margin-top: 80px;
+}
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #f1c40f;
+}
