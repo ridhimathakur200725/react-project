@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-project/static/css/main.da7a2128.css",
+    "main.js": "/react-project/static/js/main.18e8e476.js",
+    "static/media/background.webp": "/react-project/static/media/background.6b2f4cd09ccdd6cca9ca.webp",
+    "static/media/fa-solid-900.woff2": "/react-project/static/media/fa-solid-900.ce9a3fa740bd60b4ac3b.woff2",
+    "static/media/fa-brands-400.woff2": "/react-project/static/media/fa-brands-400.f276979f97f1cf375d23.woff2",
+    "static/media/aboutusemp2.webp": "/react-project/static/media/aboutusemp2.13eb061aaef683641e29.webp",
+    "static/media/aboutusemp1.webp": "/react-project/static/media/aboutusemp1.4453c6f8054030f696bd.webp",
+    "static/media/aboutusemp4.webp": "/react-project/static/media/aboutusemp4.fc38b3493a9f72a57c3e.webp",
+    "static/media/aboutusemp3.webp": "/react-project/static/media/aboutusemp3.6e639ac90636edf5cbf6.webp",
+    "static/media/fa-regular-400.woff2": "/react-project/static/media/fa-regular-400.cfbad32c79d9dda6af4a.woff2",
+    "static/media/fa-v4compatibility.woff2": "/react-project/static/media/fa-v4compatibility.296da06936a3373940c8.woff2",
+    "static/media/logoboot.webp": "/react-project/static/media/logoboot.a4da688f76a967a7a23c.webp",
+    "static/media/footerlogo.webp": "/react-project/static/media/footerlogo.865a6db58406e0a59211.webp",
+    "index.html": "/react-project/index.html",
+    "main.da7a2128.css.map": "/react-project/static/css/main.da7a2128.css.map",
+    "main.18e8e476.js.map": "/react-project/static/js/main.18e8e476.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da7a2128.css",
+    "static/js/main.18e8e476.js"
+  ]
+}
