@@ -9,7 +9,6 @@ import aboutJoinData from "../data/aboutJoinData";
 import TeamCard from "../components/TeamCard";
 import teamData from "../data/teamData";
 
-
 const BannerSection = styled.section`
   background: #1e4c8f;
   color: white;
@@ -33,7 +32,6 @@ const SectionImage = styled.img`
   border-radius: 20px;
 `;
 
-
 const TeamSection = styled.section`
   padding: 80px 0;
   background: #f5f7fb;
@@ -51,7 +49,6 @@ const TeamTitle = styled.h2`
   margin-top: 10px;
   margin-bottom: 50px;
 `;
-
 
 const VideoSection = styled.section`
   background: #2f6fb3;
@@ -73,7 +70,6 @@ const VideoRight = styled.div`
   }
 `;
 
-
 const JoinSection = styled.section`
   padding: 80px 0;
   background: #ffffff;
@@ -88,7 +84,6 @@ const JoinImage = styled.img`
 function About() {
   return (
     <>
-     
       <BannerSection>
         <Container>
           <Row className="align-items-center">
@@ -101,18 +96,23 @@ function About() {
               </p>
             </Col>
             <Col lg={6}>
-              <BannerImage src={aboutBannerData.image} alt="About" />
+              <BannerImage
+                src={process.env.PUBLIC_URL + "/images/" + aboutBannerData.image}
+                alt="About"
+              />
             </Col>
           </Row>
         </Container>
       </BannerSection>
 
-      
       <SectionTwo>
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4 mb-lg-0">
-              <SectionImage src={aboutSection2Data.image} alt="" />
+              <SectionImage
+                src={process.env.PUBLIC_URL + "/images/" + aboutSection2Data.image}
+                alt=""
+              />
             </Col>
             <Col lg={6}>
               <small className="text-primary fw-bold">
@@ -138,7 +138,6 @@ function About() {
         </Container>
       </SectionTwo>
 
-   
       <TeamSection>
         <Container>
           <TeamBadge>BEHIND THE SCENE</TeamBadge>
@@ -156,7 +155,7 @@ function About() {
                 key={member.id}
               >
                 <TeamCard
-                  img={member.img}
+                  img={process.env.PUBLIC_URL + "/images/" + member.img}
                   name={member.name}
                   role={member.role}
                 />
@@ -166,11 +165,13 @@ function About() {
         </Container>
       </TeamSection>
 
-    
       <VideoSection>
         <Row className="g-0 align-items-center">
           <Col lg={6}>
-            <VideoImage src={aboutVideoData.image} alt="" />
+            <VideoImage
+              src={process.env.PUBLIC_URL + "/images/" + aboutVideoData.image}
+              alt=""
+            />
           </Col>
           <Col lg={6}>
             <VideoRight>
@@ -200,7 +201,6 @@ function About() {
         </Row>
       </VideoSection>
 
-     
       <JoinSection>
         <Container>
           <Row className="align-items-center">
@@ -225,7 +225,10 @@ function About() {
               </Button>
             </Col>
             <Col lg={6}>
-              <JoinImage src={aboutJoinData.image} alt="" />
+              <JoinImage
+                src={process.env.PUBLIC_URL + "/images/" + aboutJoinData.image}
+                alt=""
+              />
             </Col>
           </Row>
         </Container>

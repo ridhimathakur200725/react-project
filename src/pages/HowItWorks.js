@@ -8,8 +8,6 @@ import howVideoData from "../data/howVideoData";
 import howTestimonialsSectionData from "../data/howTestimonialsSectionData";
 import testimonialsData from "../data/testimonialsData";
 
-
-
 const HeroSection = styled.section`
   background: #0d47a1;
   color: white;
@@ -23,8 +21,6 @@ const HeroImage = styled.img`
   border-radius: 20px;
   margin-bottom:-121px;
 `;
-
-
 
 const StepsSection = styled.section`
   padding: 100px 0;
@@ -50,8 +46,6 @@ const StepIcon = styled.div`
   color: #0d6efd;
   margin-bottom: 18px;
 `;
-
-
 
 const VideoSection = styled.section`
   width: 100%;
@@ -94,7 +88,6 @@ const VideoImage = styled.img`
   object-fit: cover;
 `;
 
-
 const TestimonialsSection = styled.section`
   padding: 100px 0;
 `;
@@ -108,11 +101,9 @@ const TestimonialCard = styled(Card)`
   height: 100%;
 `;
 
-
 function HowItWorks() {
   return (
     <>
-
       <HeroSection>
         <Container>
           <Row className="align-items-center g-5">
@@ -137,14 +128,13 @@ function HowItWorks() {
 
             <Col lg={6}>
               <HeroImage
-                src={howHeroData.image}
+                src={process.env.PUBLIC_URL + "/images/" + howHeroData.image}
                 alt="How It Works"
               />
             </Col>
           </Row>
         </Container>
       </HeroSection>
-
 
       <StepsSection>
         <Container>
@@ -173,11 +163,9 @@ function HowItWorks() {
 
       <VideoSection>
         <VideoWrapper>
-
-         
           <VideoLeft>
             <VideoImage
-              src={howVideoData.image}
+              src={process.env.PUBLIC_URL + "/images/" + howVideoData.image}
               alt="Video"
             />
 
@@ -197,7 +185,6 @@ function HowItWorks() {
             </div>
           </VideoLeft>
 
-         
           <VideoRight>
             <div>
               <small
@@ -233,11 +220,9 @@ function HowItWorks() {
               </Button>
             </div>
           </VideoRight>
-
         </VideoWrapper>
       </VideoSection>
 
-     
       <TestimonialsSection>
         <Container>
           <div className="text-center mb-5">

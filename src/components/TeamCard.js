@@ -29,7 +29,6 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-
 const Name = styled.h5`
   font-weight: 600;
   margin-top: 18px;
@@ -41,7 +40,6 @@ const Role = styled.p`
   color: #6c757d;
   margin-bottom: 15px;
 `;
-
 
 const SocialIcons = styled.div`
   display: flex;
@@ -60,45 +58,27 @@ const IconCircle = styled.a`
   font-size: 14px;
   transition: 0.3s;
 
-  &.facebook {
-    background: #1877f2;
-  }
+  &.facebook { background: #1877f2; }
+  &.telegram { background: #229ed9; }
+  &.instagram { background: #e4405f; }
 
-  &.telegram {
-    background: #229ed9;
-  }
-
-  &.instagram {
-    background: #e4405f;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
+  &:hover { transform: scale(1.1); }
 `;
 
 function TeamCard({ img, name, role }) {
   return (
     <CardWrapper>
       <ImageWrapper>
-        <Image src={img} alt={name} />
+        <Image src={process.env.PUBLIC_URL + "/images/" + img} alt={name} />
       </ImageWrapper>
 
       <Name>{name}</Name>
       <Role>{role}</Role>
 
       <SocialIcons>
-        <IconCircle href="#" className="facebook">
-          <FaFacebookF />
-        </IconCircle>
-
-        <IconCircle href="#" className="telegram">
-          <FaTelegramPlane />
-        </IconCircle>
-
-        <IconCircle href="#" className="instagram">
-          <FaInstagram />
-        </IconCircle>
+        <IconCircle href="#" className="facebook"><FaFacebookF /></IconCircle>
+        <IconCircle href="#" className="telegram"><FaTelegramPlane /></IconCircle>
+        <IconCircle href="#" className="instagram"><FaInstagram /></IconCircle>
       </SocialIcons>
     </CardWrapper>
   );

@@ -10,16 +10,12 @@ function FAQSection() {
         <div key={item.id} className="mb-3">
           <h5
             style={{ cursor: "pointer" }}
-            onClick={() =>
-              setActiveId(activeId === item.id ? null : item.id)
-            }
+            onClick={() => setActiveId(activeId === item.id ? null : item.id)}
           >
             {item.question}
           </h5>
 
-          {activeId === item.id ? (
-            <p>{item.answer}</p>
-          ) : null}
+          {activeId === item.id ? <p>{item.answer}</p> : null}
         </div>
       ))}
     </div>

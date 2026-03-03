@@ -6,7 +6,6 @@ import ServiceCard from "../components/ServiceCard";
 import servicesBannerData from "../data/servicesBannerData";
 import servicesData from "../data/servicesData";
 
-
 const BannerSection = styled.section`
   background: #1e4a89;
   padding: 90px 0;
@@ -31,12 +30,9 @@ const ServicesSection = styled.section`
   padding: 80px 0;
 `;
 
-
-
 function Services() {
   return (
     <>
-
       <BannerSection>
         <Container>
           <Row className="align-items-center">
@@ -55,7 +51,7 @@ function Services() {
             <Col md={6} className="text-end">
               {servicesBannerData && servicesBannerData.image ? (
                 <BannerImage
-                  src={servicesBannerData.image}
+                  src={process.env.PUBLIC_URL + "/images/" + servicesBannerData.image}
                   alt="Service Banner"
                 />
               ) : null}
@@ -64,7 +60,6 @@ function Services() {
         </Container>
       </BannerSection>
 
-      
       <ServicesSection>
         <Container>
           <Row>
@@ -72,7 +67,7 @@ function Services() {
               servicesData.map((service) => (
                 <Col md={4} key={service.id} className="mb-4">
                   <ServiceCard
-                    img={service.img}
+                    img={process.env.PUBLIC_URL + "/images/" + service.img}
                     title={service.title}
                     desc={service.desc}
                   />

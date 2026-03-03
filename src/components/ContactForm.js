@@ -80,11 +80,7 @@ function ContactForm() {
           placeholder="Your Name"
           value={state.name}
           onChange={(e) =>
-            dispatch({
-              type: "SET_FIELD",
-              field: "name",
-              value: e.target.value
-            })
+            dispatch({ type: "SET_FIELD", field: "name", value: e.target.value })
           }
         />
 
@@ -93,11 +89,7 @@ function ContactForm() {
           placeholder="Your Email"
           value={state.email}
           onChange={(e) =>
-            dispatch({
-              type: "SET_FIELD",
-              field: "email",
-              value: e.target.value
-            })
+            dispatch({ type: "SET_FIELD", field: "email", value: e.target.value })
           }
         />
 
@@ -106,11 +98,7 @@ function ContactForm() {
           placeholder="Your Message"
           value={state.message}
           onChange={(e) =>
-            dispatch({
-              type: "SET_FIELD",
-              field: "message",
-              value: e.target.value
-            })
+            dispatch({ type: "SET_FIELD", field: "message", value: e.target.value })
           }
         />
 

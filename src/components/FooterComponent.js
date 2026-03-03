@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import footerlogo from "../assets/images/footerlogo.webp";
 
 const FooterSection = styled.footer`
   background: #222;
@@ -30,7 +29,7 @@ function FooterComponent() {
       <Container>
         <Row className="gy-4">
           <Col lg={3} md={6}>
-            <Logo src={footerlogo} alt="Logo" />
+            <Logo src={process.env.PUBLIC_URL + "/images/footerlogo.webp"} alt="Logo" />
             <p>
               We are a team of passionate cleaning experts delivering
               the highest standard of service.

@@ -3,14 +3,12 @@ import { Container, Row, Col, Button, Accordion } from "react-bootstrap";
 import styled from "styled-components";
 
 import FeatureCard from "../components/FeatureCard";
-import herobg from "../assets/images/background.webp";
 
 import homeHeroData from "../data/homeHeroData";
 import homeFeaturesData from "../data/homeFeaturesData";
 import homeAboutData from "../data/homeAboutData";
 import homeVideoData from "../data/homeVideoData";
 import homeFaqData from "../data/homeFaqData";
-
 
 const HeroSection = styled.section`
   position: relative;
@@ -21,7 +19,7 @@ const HeroSection = styled.section`
       rgba(13, 71, 161, 0.9),
       rgba(13, 71, 161, 0.9)
     ),
-    url(${herobg});
+    url(${process.env.PUBLIC_URL + "/images/background.webp"});
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -46,7 +44,6 @@ const HeroContent = styled.div`
   }
 `;
 
-
 const HeroBadge = styled.span`
   display: inline-block;
   border: 1px solid #fff;
@@ -54,6 +51,7 @@ const HeroBadge = styled.span`
   border-radius: 30px;
   font-size: 14px;
 `;
+
 const MaidImage = styled.img`
   position: absolute;
   right: 0;
@@ -80,10 +78,6 @@ const MaidImage = styled.img`
   }
 `;
 
-
-
-
-
 const IconsSection = styled.section`
   background: #f5f7fb;
   padding: 70px 0;
@@ -91,7 +85,6 @@ const IconsSection = styled.section`
   position: relative;
   z-index: 3;
 `;
-
 
 const AboutSection = styled.section`
   background: #f8f9fb;
@@ -112,7 +105,6 @@ const AboutBadge = styled.span`
   display: inline-block;
   margin-bottom: 15px;
 `;
-
 
 const VideoSection = styled.section`
   background: #174a8b;
@@ -155,8 +147,6 @@ const VideoBadge = styled.span`
   margin-bottom: 15px;
 `;
 
-
-
 const FAQSectionWrapper = styled.section`
   padding: 80px 0;
 `;
@@ -169,20 +159,15 @@ const FAQBadge = styled.span`
   font-size: 14px;
 `;
 
-
-
 function Home() {
   return (
     <>
-
       <HeroSection>
-       
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
               <HeroContent>
                 <HeroBadge>{homeHeroData.badge}</HeroBadge>
-
                 <h1
                   style={{
                     fontSize: "56px",
@@ -193,11 +178,9 @@ function Home() {
                 >
                   {homeHeroData.title}
                 </h1>
-
                 <p style={{ marginTop: "20px" }}>
                   {homeHeroData.description}
                 </p>
-
                 <Button
                   style={{
                     marginTop: "20px",
@@ -212,9 +195,11 @@ function Home() {
           </Row>
         </Container>
 
-        <MaidImage src={homeHeroData.maidImage} alt="maid" />
+        <MaidImage
+          src={process.env.PUBLIC_URL + "/images/" + homeHeroData.maidImage}
+          alt="maid"
+        />
       </HeroSection>
-
 
       <IconsSection>
         <Container>
@@ -236,13 +221,12 @@ function Home() {
         </Container>
       </IconsSection>
 
-
       <AboutSection>
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
               <AboutImage
-                src={homeAboutData.image}
+                src={process.env.PUBLIC_URL + "/images/" + homeAboutData.image}
                 alt="About"
               />
             </Col>
@@ -252,9 +236,7 @@ function Home() {
               <h2 style={{ fontWeight: "700", marginTop: "10px" }}>
                 {homeAboutData.title}
               </h2>
-              <p style={{ marginTop: "15px" }}>
-                {homeAboutData.description}
-              </p>
+              <p style={{ marginTop: "15px" }}>{homeAboutData.description}</p>
               <Button
                 style={{
                   marginTop: "20px",
@@ -274,7 +256,7 @@ function Home() {
             <Col lg={6}>
               <VideoLeft>
                 <VideoImage
-                  src={homeVideoData.image}
+                  src={process.env.PUBLIC_URL + "/images/" + homeVideoData.image}
                   alt="Video"
                 />
                 <PlayButton>
@@ -286,12 +268,8 @@ function Home() {
             <Col lg={6}>
               <VideoRight>
                 <VideoBadge>{homeVideoData.badge}</VideoBadge>
-                <h2 style={{ fontWeight: "700" }}>
-                  {homeVideoData.title}
-                </h2>
-                <p style={{ marginTop: "15px" }}>
-                  {homeVideoData.description}
-                </p>
+                <h2 style={{ fontWeight: "700" }}>{homeVideoData.title}</h2>
+                <p style={{ marginTop: "15px" }}>{homeVideoData.description}</p>
                 <Button
                   style={{
                     marginTop: "20px",
@@ -312,24 +290,15 @@ function Home() {
         <Container>
           <div className="text-center mb-4">
             <FAQBadge>FAQ</FAQBadge>
-            <h2 style={{ marginTop: "15px" }}>
-              Frequently Asked Questions
-            </h2>
+            <h2 style={{ marginTop: "15px" }}>Frequently Asked Questions</h2>
           </div>
 
           <Accordion>
             {homeFaqData && homeFaqData.length > 0 ? (
               homeFaqData.map((item, index) => (
-                <Accordion.Item
-                  eventKey={index.toString()}
-                  key={item.id}
-                >
-                  <Accordion.Header>
-                    {item.question}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    {item.answer}
-                  </Accordion.Body>
+                <Accordion.Item eventKey={index.toString()} key={item.id}>
+                  <Accordion.Header>{item.question}</Accordion.Header>
+                  <Accordion.Body>{item.answer}</Accordion.Body>
                 </Accordion.Item>
               ))
             ) : (

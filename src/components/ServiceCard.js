@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
 const CardWrapper = styled.div`
   background: white;
   border-radius: 15px;
@@ -37,11 +35,10 @@ const Text = styled.p`
   font-size: 14px;
 `;
 
-
 function ServiceCard({ img, title, desc }) {
   return (
     <CardWrapper>
-      <Image src={img} alt={title} />
+      <Image src={process.env.PUBLIC_URL + "/images/" + img} alt={title} />
       <Content>
         <Title>{title}</Title>
         <Text>{desc}</Text>

@@ -5,8 +5,6 @@ import contactInfoData from "../data/contactInfoData";
 import ContactInfoCard from "../components/ContactInfoCard";
 import ContactForm from "../components/ContactForm";
 
-
-
 const HeroSection = styled.section`
   position: relative;
   background: #0d47a1;
@@ -29,14 +27,10 @@ const HeroText = styled.p`
   line-height: 1.6;
 `;
 
-
-
 const InfoSection = styled.section`
   background: #f4f6f9;
   padding: 60px 0;
 `;
-
-
 
 const FormSection = styled.section`
   padding: 80px 0;
@@ -60,7 +54,6 @@ const FormBox = styled.div`
 function Contact() {
   return (
     <>
-      
       <HeroSection>
         <Container>
           <HeroContent>
@@ -73,7 +66,6 @@ function Contact() {
         </Container>
       </HeroSection>
 
-     
       <InfoSection>
         <Container>
           <Row>
@@ -84,14 +76,13 @@ function Contact() {
         </Container>
       </InfoSection>
 
-      
       <FormSection>
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
               <ImageWrapper>
                 <img
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                  src={process.env.PUBLIC_URL + "/images/contactbanner.webp"}
                   alt="Cleaning"
                 />
               </ImageWrapper>
